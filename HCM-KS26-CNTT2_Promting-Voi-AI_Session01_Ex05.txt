@@ -9,8 +9,12 @@ Phần 2 (Sơ đồ luồng 3 bước):
 -Bước 1: Nhập dữ liệu & AI Đề xuất
 Trưởng phòng nhập lệnh yêu cầu AI: "Phân tích KPI của 50 nhân viên và lập ra danh sách những nhân viên có kpi theo thứ tự từ nhỏ đến lớn, phân tích dữ liệu trong file nhanvien.xlsx này của tôi "
 AI đề xuất danh sách các nhân viên đưa ra danh sách kpi từ nhỏ đến lớn.
+|
+v
 -Bước 2: HUMAN-IN-THE-LOOP THẨM ĐỊNH
 Đối chiếu: Xem xét kiểm tra câu trả lời của AI, xem bối cảnh thực tế của nhân viên có trường hợp đặc biệt nào không.
-Sửa lỗi,kiểm tra AI có mang định kiến (Bias) không: nếu AI đưa ra danh sách và có ra tiêu chí để xem là nhân viên kém là lịch sử chấm công kém thì hiệu chỉnh Prompt trung hòa bảo AI loại bỏ các yếu tố đánh giá như lịch sử chấm công, mà Thiết lập bộ tiêu chí chấm điểm 100% dựa trên: kỹ năng,kinh nghiệm thực tế,năng lực công việc trong file nhanvien.xlsx.
+Sửa lỗi,kiểm tra AI có mang định kiến (Bias) không: nếu AI đưa ra danh sách và có ra tiêu chí để xem là nhân viên kém là lịch sử chấm công kém thì hiệu chỉnh Prompt trung hòa bảo AI loại bỏ các yếu tố đánh giá như lịch sử chấm công, mà Thiết lập bộ tiêu chí chấm điểm 100% theo góc nhìn đa chiều dựa trên như: kỹ năng,kinh nghiệm thực tế,năng lực công việc của nhân viên trong file nhanvien.xlsx
+|
+v
 -Bước 3: Ký quyết định:
 Sau khi có bản danh sách từ AI, thì trưởng phòng cần đọc lại,kiểm tra lại có gì sai không, đưa đánh giá của mình vào danh sách đó,và chịu trách nhiệm pháp lý, đạo đức của mình trước quyết định
