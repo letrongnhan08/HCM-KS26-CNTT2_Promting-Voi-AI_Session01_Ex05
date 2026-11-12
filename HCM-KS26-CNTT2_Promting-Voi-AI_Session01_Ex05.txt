@@ -1,0 +1,16 @@
+Bài 5: Áp dụng AI Policy & Nguyên tắc Human-in-the-loop trong Đánh giá Nhân sự
+
+Phần 1 (Phân tích vi phạm):
+2 vi phạm nghiêm trọng của Trưởng phòng Nhân sự:
+- Không có trách nhiệm của mình khi AI đưa kết quả lỗi:khi AI đưa ra kết quả sai ,Trưởng phòng không kiểm tra lại kết quả của AI mà lập tức ký quyết định sa thải dẫn đến bị khiếu nại và trưởng phòng đỗ lỗi cho AI "Do AI phân tích khách quan từ số liệu, tôi không can thiệp nên hoàn toàn công bằng!"
+- Trưởng phòng không kiểm chứng định kiến Bias của AI, do AI được huấn luyện trên dữ liệu đã có sẵn,và khi nó đọc dữ liệu cũ thì nó sẽ nghĩ người kém nhất là ít KPI và lịch sử chấm công là nhân viên kém , và AI sẽ bỏ qua những trường hợp đặc biệt như nhân viên nghỉ ốm dài ngày, lỗi hệ thống chấm công, nên kết quả của AI sẽ là một chiều theo ý của nó
+Phần 2 (Sơ đồ luồng 3 bước):
+
+-Bước 1: Nhập dữ liệu & AI Đề xuất
+Trưởng phòng nhập lệnh yêu cầu AI: "Phân tích KPI của 50 nhân viên và lập ra danh sách những nhân viên có kpi theo thứ tự từ nhỏ đến lớn, phân tích dữ liệu trong file nhanvien.xlsx này của tôi "
+AI đề xuất danh sách các nhân viên đưa ra danh sách kpi từ nhỏ đến lớn.
+-Bước 2: HUMAN-IN-THE-LOOP THẨM ĐỊNH
+Đối chiếu: Xem xét kiểm tra câu trả lời của AI, xem bối cảnh thực tế của nhân viên có trường hợp đặc biệt nào không.
+Sửa lỗi,kiểm tra AI có mang định kiến (Bias) không: nếu AI đưa ra danh sách và có ra tiêu chí để xem là nhân viên kém là lịch sử chấm công kém thì hiệu chỉnh Prompt trung hòa bảo AI loại bỏ các yếu tố đánh giá như lịch sử chấm công, mà Thiết lập bộ tiêu chí chấm điểm 100% dựa trên: kỹ năng,kinh nghiệm thực tế,năng lực công việc trong file nhanvien.xlsx.
+-Bước 3: Ký quyết định:
+Sau khi có bản danh sách từ AI, thì trưởng phòng cần đọc lại,kiểm tra lại có gì sai không, đưa đánh giá của mình vào danh sách đó,và chịu trách nhiệm pháp lý, đạo đức của mình trước quyết định
